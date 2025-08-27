@@ -45,7 +45,7 @@ if (smtpHost && smtpPort && smtpUser && smtpPass) {
 let razorpayInstance;
 const razorpayKeyId = process.env.RAZORPAY_KEY_ID;
 const razorpayKeySecret = process.env.RAZORPAY_KEY_SECRET;
-const applicationFee = parseInt(process.env.APPLICATION_FEE, 10);
+const applicationFee = 200000;
 
 if (razorpayKeyId && razorpayKeySecret && !isNaN(applicationFee) && applicationFee > 0) {
   razorpayInstance = new Razorpay({ key_id: razorpayKeyId, key_secret: razorpayKeySecret });
